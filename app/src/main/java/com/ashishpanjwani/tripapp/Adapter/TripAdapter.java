@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ashishpanjwani.tripapp.AssignDriver;
 import com.ashishpanjwani.tripapp.AssignVehicle;
@@ -152,7 +153,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
 
             @Override
             public void onFailure(Call<List<TripPoint>> call, Throwable t) {
-
+                Toast.makeText(context, "Error !", Toast.LENGTH_SHORT).show();
             }
         });
     }
