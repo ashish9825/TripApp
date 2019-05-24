@@ -20,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AssignVehicle" android:theme="@style/MaterialTheme" />
+        <activity android:name=".AssignDriver" android:theme="@style/MaterialTheme" />
+        <activity android:name=".TripDetails" android:theme="@style/MaterialTheme" />
     </application>
 
 </manifest>
