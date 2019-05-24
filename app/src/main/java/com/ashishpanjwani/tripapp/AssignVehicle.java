@@ -56,7 +56,7 @@ public class AssignVehicle extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RequestInterface request = retrofit.create(RequestInterface.class);
-        Call<JSONResponse> call = request.getJSON();
+        Call<JSONResponse> call = request.getJSONVehicles();
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
