@@ -46,11 +46,11 @@ public class TripDetails extends AppCompatActivity {
     ImageView callButton;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trip_details);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_tripDetails);
+        Toolbar toolbar = findViewById(R.id.toolbar_tripDetails);
         setSupportActionBar(toolbar);
         tripNumber = findViewById(R.id.trip_number);
         startTime = findViewById(R.id.scheduled_starttime);

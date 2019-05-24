@@ -35,7 +35,7 @@ public class AssignVehicle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.assign_vehicle);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -45,7 +45,7 @@ public class AssignVehicle extends AppCompatActivity {
     }
 
     private void initViews(){
-        mRecyclerView = (RecyclerView)findViewById(R.id.card_recycler_view);
+        mRecyclerView = findViewById(R.id.card_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
