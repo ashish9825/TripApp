@@ -55,7 +55,7 @@ public class TripPointDetailsAdapter extends RecyclerView.Adapter<TripPointDetai
 
     @Override
     public int getItemCount() {
-        return 0;
+        return tripPointList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -11,10 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.ashishpanjwani.tripapp.Adapter.DriverAdapter;
+import com.ashishpanjwani.tripapp.Adapter.VehicleAdapter;
 import com.ashishpanjwani.tripapp.Interfaces.RequestInterface;
-import com.ashishpanjwani.tripapp.Model.Drivers;
+import com.ashishpanjwani.tripapp.Model.Vehicle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,8 +28,8 @@ public class AssignVehicle extends AppCompatActivity {
 
     public static final String BASE_URL = "https://api.learn2crack.com";
     private RecyclerView mRecyclerView;
-    private ArrayList<Drivers> mArrayList;
-    private DriverAdapter mAdapter;
+    private ArrayList<Vehicle> mArrayList;
+    private VehicleAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +62,8 @@ public class AssignVehicle extends AppCompatActivity {
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
 
                 JSONResponse jsonResponse = response.body();
-                mArrayList = new ArrayList<>(Arrays.asList(jsonResponse.getDrivers()));
-                mAdapter = new DriverAdapter(mArrayList);
+                mArrayList = new ArrayList<>(Arrays.asList(jsonResponse.getVehicles()));
+                mAdapter = new VehicleAdapter(mArrayList);
                 mRecyclerView.setAdapter(mAdapter);
             }
 
